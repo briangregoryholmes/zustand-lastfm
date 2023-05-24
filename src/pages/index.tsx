@@ -1,3 +1,3 @@
 export default function Home() {
-  return <p className="text-lg text-sky-500">Hello, Everyrealm!</p>;
+  return <p className="text-lg text-center text-sky-500">Hello, world!</p>;
 }

@@ -1,10 +1,20 @@
-import React from 'react';
+import { Genres } from '@/components';
+import { Tag } from '@/types/api';
 
-function Header({ name, listeners }: { name: string; listeners: string }) {
+function Header({
+  name,
+  listeners,
+  genres,
+}: {
+  name: string;
+  listeners: string;
+  genres: Tag[];
+}) {
   return (
-    <div className="flex-col justify-center items-center mx-auto w-1/2">
+    <div className="flex-col justify-center items-center mx-auto mb-6 font-black">
       <h1 className="text-6xl text-center">{name}</h1>
-      <p className="text-center">{listeners} listeners</p>
+      <Genres genres={genres} />
+      <p className="text-center text-sky-300">{listeners} listeners</p>
     </div>
   );
 }

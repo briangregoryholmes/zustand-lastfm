@@ -7,7 +7,7 @@ type LayoutProps = {
 
 function Layout({ children }: LayoutProps) {
   return (
-    <div>
+    <div className="p-10">
       <SearchField />
       <main>{children}</main>
     </div>

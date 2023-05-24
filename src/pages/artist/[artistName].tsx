@@ -18,15 +18,15 @@ export default function ArtistPage() {
       {error || !cachedData ? (
         <p>{error}</p>
       ) : (
-        <>
+        <div className="flex-col max-w-3xl mx-auto">
           <Header
             name={cachedData.artist?.name}
+            genres={cachedData.artist?.tags?.tag}
             listeners={cachedData.artist?.stats?.listeners}
           />
           <Bio bio={cachedData.artist?.bio?.summary} />
-          <Genres genres={cachedData.artist?.tags?.tag} />
           <SimilarArtists data={cachedData.artist?.similar?.artist} />
-        </>
+        </div>
       )}
     </>
   );

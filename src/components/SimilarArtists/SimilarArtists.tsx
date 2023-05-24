@@ -6,11 +6,11 @@ function SimilarArtists({ data }: { data: Array<Artist> }) {
   return (
     <div>
       <p className="text-2xl mb-4 font-semibold">Similar Artists</p>
-      <div className="flex gap-5">
-        {data.map((artist) => (
+      <div className="flex w-full gap-4">
+        {data.slice(0, 3).map((artist) => (
           <div key={artist.name}>
             <Link
-              className="bg-blue-500 text-white w-40 h-40 flex items-center justify-center rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-200 ease-in-out"
+              className="bg-zinc-800 text-white border-sky-300 border font-black w-fit p-2 flex items-center justify-center rounded-lg shadow-md hover:bg-sky-800 transition-colors duration-200 ease-in-out"
               href={`/artist/${artist.name.toLowerCase().replace(/\s/g, '-')}`}
             >
               {artist.name}
