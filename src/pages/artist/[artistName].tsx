@@ -10,7 +10,7 @@ export default function ArtistPage() {
   const { cachedData, error, loading } = useArtistDataFetch(artistName);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p className="text-center mx-auto">Loading...</p>;
   }
 
   return (
