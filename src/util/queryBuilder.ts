@@ -2,7 +2,7 @@
 
 export default function getAPIURL(artistName: string) {
   // Create new url
-  const url = new URL('http://ws.audioscrobbler.com/2.0/');
+  const url = new URL('https://ws.audioscrobbler.com/2.0/');
 
   // Add query params
   url.searchParams.append('method', 'artist.getinfo');
