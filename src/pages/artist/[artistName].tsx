@@ -1,4 +1,4 @@
-import { Bio, Genres, Header, SimilarArtists } from '@/components';
+import { Bio, Header, SimilarArtists } from '@/components';
 import { useRouter } from 'next/router';
 import { useArtistDataFetch } from '@/hooks/useArtistDataFetch';
 

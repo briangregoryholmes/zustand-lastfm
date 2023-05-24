@@ -30,4 +30,7 @@ export const useActions = () => useStore((state) => state.actions);
 
 // Artist data selector
 export const useArtistData = (artist: string) =>
-  useStore((state) => state.artistData[artist]);
+  useStore((state) => {
+    const found = state.artistData[artist];
+    return found ? found : null;
+  });

@@ -1,5 +1,5 @@
 import { type AppType } from 'next/app';
-import Layout from '@/components/Layout/Layout';
+import { Layout } from '@/components';
 import '@/styles/globals.css';
 import Head from 'next/head';
 
