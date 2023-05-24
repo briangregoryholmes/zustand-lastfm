@@ -16,7 +16,7 @@ export const useArtistDataFetch = (artistName: string) => {
     try {
       // Helper function to construct the relevant API url
       const url = getAPIURL(artistName);
-      const res = await fetch(url);
+      const res = await fetch(url, { mode: 'cors' });
       const data: ArtistData | APIError = await res.json();
 
       // Ensure that the data is valid
